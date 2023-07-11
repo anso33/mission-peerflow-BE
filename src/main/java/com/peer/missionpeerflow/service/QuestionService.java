@@ -45,6 +45,7 @@ public class QuestionService {
 	public void postQuestion(QuestionRequest request) {
 		Question question = new Question(request);
 		questionRepository.save(question);
+		System.out.println(question.getQuestionId());
 	}
 
 	@Transactional
